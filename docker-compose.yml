@@ -1,0 +1,23 @@
+version: '2.3'
+services:
+  splash:
+    image: scrapinghub/splash
+    container_name: splash
+    hostname: localhost
+    ports:
+      - "8050:8050"
+  
+  pricetracker:
+    image: pricetracker
+    container_name: pricetracker
+    build: ./src
+    ports:
+      - "5000:5000"
+    environment:
+      MONGO_URI: 
+      MONGO_DB: 
+      SPLASH_URL: 'http://host.docker.internal:8050'
+      FLASK_URL: 
+      TOKEN: 
+      
+

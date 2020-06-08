@@ -1,0 +1,7 @@
+requests
+scrapy
+scrapy-splash
+pymongo[srv]
+flask
+flask_apscheduler
+gunicorn
